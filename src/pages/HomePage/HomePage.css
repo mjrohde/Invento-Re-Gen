@@ -2,3 +2,87 @@
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.whoWeAre {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+
+.whoWeAre > h1 {
+  font-family: sans-serif;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 40px;
+  max-width: 80%;
+  position: relative;
+}
+
+.whoWeAre h1:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(to left, black 10%, white);
+  right: 65%;
+  top: 50%;
+  position: absolute;
+}
+
+.whoWeAre h1:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(to right, black 10%, white);
+  left: 65%;
+  top: 50%;
+  position: absolute;
+}
+
+.whoWeAre > p {
+  font-size: 20px;
+}
+.whoAreWeInfo {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 2em;
+}
+.info {
+  width: 45%;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px black;
+  min-height: 10vh;
+  max-height: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+}
+.auth {
+  width: 95%;
+}
+
+.infoLink {
+  text-decoration: none;
+  color: black;
+}
+
+.infoLink:hover {
+  text-decoration: underline;
+}
+
+@media all and (max-width: 600px) {
+  .whoWeAre > h1 {
+    font-size: 20px;
+  }
+  .whoWeAre h1:before {
+    right: 80%;
+  }
+
+  .whoWeAre h1:after {
+    left: 80%;
+  }
+}

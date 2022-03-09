@@ -25,11 +25,11 @@ function Navbar() {
       {width < 1025 && (
         <>
           {/** Hamburger Menu*/}
-          <MenuIcon
-            fontSize="large"
-            id="hamburger"
-            onClick={() => setShowMenu(!showMenu)}
-          />
+          <div id="hamburger" onClick={() => setShowMenu(!showMenu)}>
+            <div className="lines first"></div>
+            <div className="lines second"></div>
+            <div className="lines third"></div>
+          </div>
         </>
       )}
       <span
