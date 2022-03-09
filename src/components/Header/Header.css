@@ -24,9 +24,9 @@
 
 .headerText > h1 {
   color: #0e2d5d;
-  font-size: 100px;
+  font-size: 10vw;
 }
 
 .headerText > h3 {
-  font-size: 40px;
+  font-size: 3vw;
 }

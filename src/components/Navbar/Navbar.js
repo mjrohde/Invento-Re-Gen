@@ -1,40 +1,43 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Helmet } from "react-helmet";
 import { hamburgerMenu } from "./navbar-script";
 
 function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false);
 
+  //Dynamically being called to update hook on resize
   function setDimensions() {
     setWidth(window.innerWidth);
   }
 
   useEffect(() => {
+    hamburgerMenu();
     window.addEventListener("resize", setDimensions);
 
+    //Cleanup
     return () => window.removeEventListener("resize", setDimensions);
   }, [window.innerWidth]);
-
-  useEffect(() => {
-    hamburgerMenu();
-  }, []);
 
   return (
     <nav className={width > 1025 ? "navbar" : "navbar mobile"}>
       {width < 1025 && (
-        <MenuIcon
-          fontSize="large"
-          id="hamburger"
-          onClick={() => setShowMenu(!showMenu)}
-        />
+        <>
+          {/** Hamburger Menu*/}
+          <MenuIcon
+            fontSize="large"
+            id="hamburger"
+            onClick={() => setShowMenu(!showMenu)}
+          />
+        </>
       )}
       <span
         className={width < 1025 ? "navbar-links-mobile" : "navbar-links"}
         style={{ width: width < 1025 ? (showMenu ? "40%" : 0) : "50vw" }}
       >
+        {/* Added spans within the a selector in order to get a background behind the text, using just the a 
+        selector would have given a background exceeding the text*/}
         <a href="/">
           <span>Hjem</span>
         </a>

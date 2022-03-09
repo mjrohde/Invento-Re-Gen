@@ -22,7 +22,7 @@
 
 #hamburgerActive {
   position: absolute;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -66,7 +66,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   color: white;
   overflow-x: hidden;
   transition: 0.5s;
@@ -84,4 +84,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  #hamburgerActive {
+    left: 37.3%;
+  }
+}
+
+@media all and (max-width: 699px) {
+  .navbar-links-mobile > a {
+    justify-content: start;
+    padding: 15px 10px;
+  }
+
+  #hamburgerActive {
+    left: 35%;
+  }
 }
