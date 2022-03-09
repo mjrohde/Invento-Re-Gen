@@ -1,4 +1,4 @@
 # Start of project
 
 ## Navbar
-![alt text](./src/Images/Github/Header&Navbar.gif?raw=true)
+![alt text](./src/Images/Github/Header&NavbarFin.gif?raw=true)
