@@ -24,7 +24,7 @@
 
 #hamburgerActive {
   position: absolute;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -37,9 +37,8 @@
 }
 
 .lines {
-  width: 100%;
   height: 3px;
-  background: white;
+  background: black;
   margin: 5px;
   transition: 0.8s cubic-bezier(0.4, -0.6, 0.32, 1.9);
 }
@@ -56,21 +55,25 @@
 
 .lines.first.active {
   width: 45%;
+  background-color: white;
   transform-origin: bottom;
-  transform: rotatez(45deg) translate(3px, 0px);
+  transform: rotatez(45deg) translate(2.55px, -0.74px);
   transition: 0.8s cubic-bezier(0.4, -0.6, 0.32, 1.9);
 }
 
 .lines.second.active {
   width: 90%;
+  background-color: white;
   transform-origin: top;
   transform: rotatez(-45deg);
+  transition: 0.8s cubic-bezier(0.4, -0.6, 0.32, 1.9);
 }
 
 .lines.third.active {
   transform-origin: bottom;
+  background-color: white;
   width: 45%;
-  transform: translate(13px, -3px) rotatez(45deg);
+  transform: translate(13.6px, -3.5px) rotatez(45deg);
   transition: 0.8s cubic-bezier(0.4, -0.6, 0.32, 1.9);
 }
 
@@ -81,10 +84,10 @@
 }
 
 .navbar-links > a {
-  flex: 0.16;
+  flex: 0.2;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 20px;
   width: fit-content;
 }
@@ -107,7 +110,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   overflow-x: hidden;
   transition: 0.5s;

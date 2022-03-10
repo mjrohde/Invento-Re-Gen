@@ -1,0 +1,36 @@
+.inlineSpan {
+  min-height: 40vh;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.inlineSpan > span {
+  flex: 0.5;
+}
+
+.inlineImg {
+  height: 100%;
+}
+.inlineImg > img {
+  width: 80%;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.inlineText {
+  text-align: start;
+  padding: 20px 30px;
+}

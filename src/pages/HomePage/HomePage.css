@@ -7,6 +7,7 @@
   min-height: 100vh;
   width: 80%;
   margin: auto;
+  position: relative;
 }
 
 .whoWeAre > h1 {
@@ -52,26 +53,33 @@
   padding: 50px 20px;
   gap: 2em;
 }
-.info {
-  width: 45%;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 3px black;
-  min-height: 10vh;
-  max-height: fit-content;
-  border-radius: 20px;
-  padding: 10px;
+.histConc {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-.auth {
-  width: 95%;
+.info {
+  flex: 0.5;
+  text-align: start;
+  max-width: 30%;
+  padding: 30px 50px;
 }
 
 .infoLink {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .infoLink:hover {
   text-decoration: underline;
+}
+
+.finaut {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 300px;
 }
 
 @media all and (max-width: 600px) {
@@ -84,5 +92,13 @@
 
   .whoWeAre h1:after {
     left: 80%;
+  }
+  .info {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .finaut {
+    position: relative;
   }
 }

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import MenuIcon from "@mui/icons-material/Menu";
-import { hamburgerMenu } from "./navbar-script";
 
 function Navbar() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -13,7 +11,6 @@ function Navbar() {
   }
 
   useEffect(() => {
-    hamburgerMenu();
     window.addEventListener("resize", setDimensions);
 
     //Cleanup
@@ -25,10 +22,15 @@ function Navbar() {
       {width < 1025 && (
         <>
           {/** Hamburger Menu*/}
-          <div id="hamburger" onClick={() => setShowMenu(!showMenu)}>
-            <div className="lines first"></div>
-            <div className="lines second"></div>
-            <div className="lines third"></div>
+          <div
+            id={showMenu ? "hamburgerActive" : "hamburger"}
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <div className={showMenu ? "lines first active" : "lines first"} />
+            <div
+              className={showMenu ? "lines second active" : "lines second"}
+            />
+            <div className={showMenu ? "lines third active" : "lines third"} />
           </div>
         </>
       )}
@@ -38,22 +40,19 @@ function Navbar() {
       >
         {/* Added spans within the a selector in order to get a background behind the text, using just the a 
         selector would have given a background exceeding the text*/}
-        <a href="/">
+        <a href="#/" onClick={() => setShowMenu(false)}>
           <span>Hjem</span>
         </a>
-        <a href="/">
-          <span>Hvem vi er</span>
-        </a>
-        <a href="/">
+        <a href="/#/whatwedo" onClick={() => setShowMenu(false)}>
           <span>Hva vi gjør</span>
         </a>
-        <a href="/">
+        <a href="/" onClick={() => setShowMenu(false)}>
           <span>Ressurser</span>
         </a>
-        <a href="/">
+        <a href="/" onClick={() => setShowMenu(false)}>
           <span>Kontakt Oss</span>
         </a>
-        <a href="/">
+        <a href="/" onClick={() => setShowMenu(false)}>
           <span>Logg inn</span>
         </a>
       </span>

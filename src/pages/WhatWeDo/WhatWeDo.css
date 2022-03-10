@@ -1,0 +1,27 @@
+.investment {
+  background: #001e3a;
+  color: white;
+  min-height: 40vh;
+  width: 100vw;
+}
+
+.assetsManagement {
+  min-height: 30vh;
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.whatHeader {
+  width: 100vw;
+  height: 60vh;
+  background-image: url("https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/Zugpsitze_mountain.jpg?crop=0,176,3008,1654&wid=4000&hei=2200&scl=0.752");
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 3px black;
+  font-size: 5vw;
+  display: grid;
+  place-items: center;
+}
