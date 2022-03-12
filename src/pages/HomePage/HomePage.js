@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import finaut from "../../Images/FinAut.png";
 
 function HomePage() {
+  document.title = "Invento Re-Gen";
   return (
     <div className="homeContainer">
       <Header />

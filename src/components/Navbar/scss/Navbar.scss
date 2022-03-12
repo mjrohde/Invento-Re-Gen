@@ -1,0 +1,155 @@
+$primaryLinkDecoration: none;
+$primaryBackgroundColor: rgba(0, 0, 0, 0.5);
+$linesBackgroundColor: white;
+$primaryTextColor: white;
+$linesTransition: 0.8s;
+
+.navbar {
+  background: transparent;
+  position: absolute;
+  top: 2%;
+  width: 50vw;
+  left: 25%;
+  right: 25%;
+  z-index: 100;
+}
+
+.navbar.mobile {
+  width: 100vw;
+  height: 50px;
+  left: 0;
+  right: 0;
+}
+#hamburger {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 30px;
+  height: 50px;
+  transition: $linesTransition cubic-bezier(0.68, -0.6, 0.32, 1.9);
+}
+
+#hamburgerActive {
+  position: absolute;
+  background: $primaryBackgroundColor;
+  color: $primaryTextColor;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: rotate(-90deg);
+  width: 35px;
+  top: 2%;
+  left: 38.2%;
+  padding: 10px 25px;
+  transition: $linesTransition cubic-bezier(0.4, -0.6, 0.32, 1.9);
+}
+
+.lines {
+  height: 3px;
+  background: black;
+  margin: 5px;
+  transition: $linesTransition cubic-bezier(0.4, -0.6, 0.32, 1.9);
+}
+
+.first {
+  width: 50%;
+}
+.second {
+  width: 100%;
+}
+.third {
+  width: 75%;
+}
+
+.lines.first.active {
+  width: 45%;
+  background-color: $linesBackgroundColor;
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(2.55px, -0.74px);
+  transition: $linesTransition cubic-bezier(0.4, -0.6, 0.32, 1.9);
+}
+
+.lines.second.active {
+  width: 90%;
+  background-color: $linesBackgroundColor;
+  transform-origin: top;
+  transform: rotatez(-45deg);
+  transition: $linesTransition cubic-bezier(0.4, -0.6, 0.32, 1.9);
+}
+
+.lines.third.active {
+  transform-origin: bottom;
+  background-color: $linesBackgroundColor;
+  width: 45%;
+  transform: translate(13.6px, -3.5px) rotatez(45deg);
+  transition: $linesTransition cubic-bezier(0.4, -0.6, 0.32, 1.9);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links > a {
+  flex: 0.2;
+  text-align: center;
+  text-decoration: $primaryLinkDecoration;
+  color: black;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.navbar-links > a > span {
+  padding: 5px 10px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.navbar-links > a > span:hover {
+  background-color: rgba(80, 80, 80, 0.2);
+}
+
+.navbar-links-mobile {
+  height: 100%;
+  width: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: $primaryBackgroundColor;
+  color: $primaryTextColor;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.navbar-links-mobile > a {
+  text-decoration: $primaryLinkDecoration;
+  color: $primaryTextColor;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  min-width: 90%;
+  margin: 10px 0;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  #hamburgerActive {
+    left: 37.3%;
+  }
+}
+
+@media all and (max-width: 699px) {
+  .navbar-links-mobile > a {
+    justify-content: start;
+    padding: 15px 10px;
+  }
+
+  #hamburgerActive {
+    left: 35%;
+  }
+}

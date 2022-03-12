@@ -46,7 +46,7 @@ function Navbar() {
         <a href="/#/whatwedo" onClick={() => setShowMenu(false)}>
           <span>Hva vi gjør</span>
         </a>
-        <a href="/" onClick={() => setShowMenu(false)}>
+        <a href="/#/resources" onClick={() => setShowMenu(false)}>
           <span>Ressurser</span>
         </a>
         <a href="/" onClick={() => setShowMenu(false)}>

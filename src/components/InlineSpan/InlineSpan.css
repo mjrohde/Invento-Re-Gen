@@ -23,7 +23,7 @@
 .inlineImg {
   height: 100%;
 }
-.inlineImg > img {
+.inlineImg > a > img {
   width: 80%;
   object-fit: cover;
   margin: auto;
@@ -33,4 +33,24 @@
 .inlineText {
   text-align: start;
   padding: 20px 30px;
+}
+
+.inlineText > p {
+  line-height: 1.8em;
+}
+
+@media all and (max-width: 699px) {
+  .inlineSpan > span {
+    flex: 1;
+  }
+  .inlineSpan {
+    flex-direction: column;
+  }
+
+  .inlineImg > a > img {
+    width: 100%;
+  }
+  .inlineText {
+    padding: 10px 10px;
+  }
 }

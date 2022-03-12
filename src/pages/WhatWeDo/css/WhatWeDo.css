@@ -5,12 +5,31 @@
   width: 100vw;
 }
 
-.assetsManagement {
+.privAssetsManagement {
   min-height: 30vh;
   width: 80%;
   display: flex;
   flex-flow: row wrap;
   margin: auto;
+  position: relative;
+}
+
+.pension {
+  position: absolute;
+  width: 25em;
+  height: fit-content;
+  bottom: -45px;
+  left: 20%;
+  background: #001e3a;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 3px white;
+}
+
+.pension > p {
+  line-height: 1.2em;
+  text-align: start;
 }
 
 .whatHeader {
@@ -25,3 +44,16 @@
   display: grid;
   place-items: center;
 }
+
+@media all and (min-width: 700px) and (max-width: 1025px) {
+  .pension {
+    position: static;
+  }
+}
+@media all and (max-width: 699px) {
+  .pension {
+    position: static;
+  }
+}
+
+/*# sourceMappingURL=WhatWeDo.css.map */

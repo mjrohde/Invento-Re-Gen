@@ -5,6 +5,7 @@
   width: 50vw;
   left: 25%;
   right: 25%;
+  z-index: 100;
 }
 
 .navbar.mobile {
@@ -13,6 +14,7 @@
   left: 0;
   right: 0;
 }
+
 #hamburger {
   position: absolute;
   top: 2%;
@@ -46,9 +48,11 @@
 .first {
   width: 50%;
 }
+
 .second {
   width: 100%;
 }
+
 .third {
   width: 75%;
 }
@@ -135,7 +139,6 @@
     left: 37.3%;
   }
 }
-
 @media all and (max-width: 699px) {
   .navbar-links-mobile > a {
     justify-content: start;
@@ -146,3 +149,5 @@
     left: 35%;
   }
 }
+
+/*# sourceMappingURL=Navbar.css.map */

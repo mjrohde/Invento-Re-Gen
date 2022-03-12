@@ -1,3 +1,7 @@
+$fontFamily: sans-serif;
+$primaryFontColor: black;
+$linkDecoration: none;
+
 .homeContainer {
   min-height: 100vh;
   min-width: 100vw;
@@ -11,7 +15,7 @@
 }
 
 .whoWeAre > h1 {
-  font-family: sans-serif;
+  font-family: $fontFamily;
   margin: 100px auto;
   text-align: center;
   font-size: 40px;
@@ -66,8 +70,8 @@
 }
 
 .infoLink {
-  text-decoration: none;
-  color: black;
+  text-decoration: $linkDecoration;
+  color: $primaryFontColor;
   font-weight: bold;
 }
 
@@ -82,7 +86,7 @@
   width: 300px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 699px) {
   .whoWeAre > h1 {
     font-size: 20px;
   }
